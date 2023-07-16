@@ -1,27 +1,19 @@
 {
   "name": "codewave",
   "version": "1.0.0",
-  "description": "",
+  "description": "webpage for web design company",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 10 versions, not dead",
   "scripts": {
-    "watch:html": "onchange \"src/*.html\" -- npm run copy:html",
-    "copy:html": "copyfiles -u 1 ./src/*.html ./public",
-    "watch:js": "onchange \"src/js/*.js\" -- npm run copy:js",
-    "copy:js": "copyfiles -u 1 ./src/js/*.js ./public",
-    "watch:assets": "onchange \"src/assets/**/*\" -- npm run copy:assets",
-    "copy:assets": "copyfiles -u 1 ./src/assets/**/* ./public",
-    "watch:sass": "sass -w ./src/sass/main.scss ./public/css/main.css",
-    "watch": "run-p watch:*",
-    "copy": "run-p copy:*",
-    "live:server": "live-server ./public",
-    "start": "npm-run-all -s copy -p watch live:server"
+    "start": "parcel",
+    "build": "parcel build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "copyfiles": "^2.4.1",
-    "live-server": "^1.2.2",
-    "npm-run-all": "^4.1.5",
-    "onchange": "^7.1.0",
-    "sass": "^1.63.4"
+    "@parcel/transformer-sass": "^2.9.3",
+    "core-js": "^3.31.1",
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
   }
 }

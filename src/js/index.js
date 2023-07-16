@@ -1,3 +1,5 @@
+import "core-js";
+
 /* General DOM Manipulation */
 //
 
@@ -41,5 +43,4 @@ document.querySelectorAll(".js-tabs-container").forEach((tabsContainer) => {
   });
 });
 
-
-console.log('sdjkhfsdfgit ');
+console.log("sdjkhfsdfgit ");
