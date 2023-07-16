@@ -1,0 +1,18 @@
+@use "../02-utils" as *;
+
+/* ======== Badges ======== */
+.badge {
+  border-radius: 0.6rem;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  font-size: var(--small-font-size);
+}
+.badge-gray {
+  border-radius: 0.6rem;
+  background-color: #eee;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+
+  font-size: var(--small-font-size);
+  color: var(--black-text);
+}

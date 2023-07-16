@@ -1,0 +1,116 @@
+// >>>>>>>>>>>>>>> Colors <<<<<<<<<<<<<<<<<<
+//
+
+/* Main Color
+   Sky:   
+    teal-50:  ##f0f9ff clr-white
+    teal-100: ##e0f2fe clr-main-lighter
+    teal-300: ##bae6fd clr-main-light
+    teal-400: ##38bdf8 clr-main
+    teal-500: ##0ea5e9 text-clr-main
+    teal-600: ##0284c7 clr-main-dark
+    teal-800: ##075985 clr-main-darker
+    teal-950: ##082f49 black-text
+              #082f17 clr-black
+*/
+
+// Background Colors
+$clr-white: #f0f9f9;
+$clr-main-lighter: #e0f2fe; // lighter than teal-100
+$clr-main-light: #bae6fd;
+$clr-main: #38bdf8;
+$clr-main-dark: #0284c7;
+$clr-main-darker: #075985;
+$clr-black: #082f17;
+
+// Text Colors
+$white-text: $clr-white;
+$black-text: #082f49;
+$text-clr-main: #0ea5e9;
+$text-clr: #475569; // slate-600
+$text-clr-light: #94a3b8; // slate-400
+$text-clr-lighter: #cbd5e1; // slate-400
+
+// General Colors
+$clr-red-ligher: hsl(4, 90%, 90%);
+$clr-red: hsl(4, 90%, 58%);
+$clr-green-lighter: hsl(142, 69%, 90%);
+$clr-green: hsl(142, 71%, 45%);
+$clr-orange-lighter: hsl(38, 92%, 90%);
+$clr-orange: hsl(38, 92%, 50%);
+
+// Grays
+// $eee-gray: #eee;
+// $ddd-gray: #ddd;
+// $ccc-gray: #ccc;
+// $bbb-gray: #bbb;
+// $aaa-gray: #aaa;
+
+// Border - Box-shadow
+$border-lt: 1px solid #ddd;
+$border-md: 1px solid #ccc;
+$border-dark: 1px solid #aaa;
+$shadow-lt: 0 0.5rem 1rem rgba(0, 0, 0, 10%);
+$shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 20%);
+$shadow-dark: 0 0.5rem 1rem rgba(0, 0, 0, 40%);
+
+// Main Background Colors
+$body-clr: $clr-white;
+$container-clr: $clr-main-lighter;
+
+// Scroll Bar Colors
+$scroll-bar-clr: $body-clr;
+$scroll-thumb-clr: $clr-main-light;
+$thumb-hover-clr: $clr-main;
+
+// Dark Mode Colors
+//
+//
+//
+//
+//
+//
+//
+
+// >>>>>>>>>>>>>>> Typography <<<<<<<<<<<<<<<<<<
+//
+// Font Family
+//
+
+// Font Size (Note that html font-size is set to 62.5%, therefore, 1rem = 10px)
+$fs-large: clamp(4.4rem, 3.2rem + 4vw, 8rem);
+// big-size => 44px at 300 & 80px at 1200
+$fs-h1: clamp(3.2rem, 2.54rem + 2.22vw, 5.2rem);
+// h1-size => 32px at 300 & 52px at 1200
+$fs-h2: clamp(2.8rem, 2.3rem + 1.78vw, 4rem);
+// h2-size => 28px at 300 & 44px at 1200
+$fs-h3: clamp(2.4rem, 2.2rem + 0.89vw, 3.2rem);
+// h3-size => 24px at 300 & 32px at 1200
+$fs-h4: clamp(1.8rem, 1.74rem + 0.89vw, 2rem);
+// h4-size => 20px at 300 & 28px at 1200
+$fs-h5: clamp(1.6rem, 1.65rem + 0.45vw, 1.8rem);
+// h5-size => 16px at 300 & 20px at 1200
+$fs-h6: clamp(1.4rem, 1.34rem + 0.22vw, 1.6rem);
+// h6-size => 14px at 300 & 16px at 1200
+$fs-normal: clamp(1.4rem, 1.34rem + 0.22vw, 1.6rem);
+// normal-size => 14px at 300 & 16px at 1200
+$fs-small: clamp(1.3rem, 1.27rem + 0.11vw, 1.4rem);
+// small-size => 13px at 300 & 14px at 1200
+$fs-smaller: clamp(1.2rem, 1.17rem + 0.11vw, 1.3rem);
+// smaller-size => 12px at 300 & 13px at 1200
+
+// >>>>>>>>>>>>>>> General <<<<<<<<<<<<<<<<<<
+//
+// Z-index
+$z-scroll-top-btn: 10;
+$z-header: 100;
+$z-modal: 1000;
+
+// Transition
+$trans-dur: 0.3s;
+
+// Header Height
+$header-height: 9rem;
+
+// Main Padding
+$main-padding: clamp(1rem, 0.34rem + 2.23vw, 3rem);

@@ -1,0 +1,34 @@
+@use "../02-utils" as *;
+
+/* ======== Scroll Top Button ======== */
+
+/* HTML:
+  <a href="#" class="scroll-top-btn" id="scroll-top-btn">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a> 
+*/
+
+@media screen and (min-width: 568px) {
+  .scroll-top-btn.btn-full-main {
+    position: fixed;
+    right: 3rem;
+    bottom: -100%;
+    opacity: 0.8;
+    z-index: var(--z-scroll-top-btn);
+
+    /* font-size: var(--sm-icon); */
+    /* background-color: var(--clr-main);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 0.4rem;
+      transition: var(--trans-dur); */
+  }
+
+  /* .scroll-top:hover {
+      background-color: var(--clr-main-darker);
+    } */
+
+  .scroll-top.show {
+    bottom: 8rem;
+  }
+}

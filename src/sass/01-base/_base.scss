@@ -1,0 +1,82 @@
+@use "../02-utils" as *;
+
+// Global Styles
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  // @include respond(lg-desktop) {
+  //   font-size: 80%;
+  // }
+}
+
+::selection {
+  background-color: $clr-main;
+  color: $white-text;
+}
+
+// Responsive Images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Inline Elements
+// prettier-ignore
+img, 
+span, 
+a, button, 
+label, 
+input, textarea, select {
+  display: inline-block;
+}
+
+// Link & Button General Styling
+a,
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+button {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+// General
+ul {
+  list-style: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  opacity: 0.5;
+}
+input:disabled {
+  cursor: no-drop;
+}
+
+input::placeholder,
+button::placeholder {
+  font-family: inherit;
+  font-size: inherit;
+}

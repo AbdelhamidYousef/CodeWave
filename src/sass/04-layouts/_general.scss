@@ -1,0 +1,64 @@
+@use "../01-base" as *;
+@use "../02-utils" as *;
+
+// Main Background Colors
+body {
+  background-color: $body-clr;
+}
+section:nth-of-type(even) {
+  background-color: $clr-main-lighter;
+}
+
+// Main Layout
+body {
+  overflow-x: hidden;
+}
+section {
+  padding-top: clamp(3rem, 1rem + 6.67vw, 9rem);
+  padding-bottom: clamp(3rem, 0.3rem + 9vw, 12rem);
+
+}
+
+.container {
+  max-width: 120rem;
+  margin-inline: auto;
+  padding-left: $main-padding;
+  padding-right: $main-padding;
+}
+
+// Titles
+.main-title {
+  @extend .h2;
+  color: $clr-white;
+  margin-bottom: 1rem;
+}
+.main-subtitle {
+  @extend .h3;
+  color: $clr-white;
+  margin-bottom: 1.5rem;
+}
+
+.section-title,
+.section-subtitle {
+  text-align: center;
+}
+.section-title {
+  font-size: $fs-large;
+  font-weight: 800;
+  color: $text-clr-lighter;
+  letter-spacing: -1px;
+  @include respond(tab-port) {
+    letter-spacing: -3px;
+  }
+}
+.section-subtitle {
+  margin-bottom: clamp(4rem, 2.67rem + 4.44vw, 8rem);
+  margin-top: -1rem;
+  @include respond(tab-port) {
+    margin-top: -2rem;
+  }
+}
+
+.tertiary-title {
+  @extend .h5;
+}

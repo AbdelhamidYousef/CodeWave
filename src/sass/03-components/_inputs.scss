@@ -1,0 +1,18 @@
+@use "../02-utils" as *;
+
+/* ======== Inputs ======== */
+.input-bordered,
+.input-borderless {
+  width: 100%;
+  padding: 1rem;
+  transition: var(--trans-dur);
+}
+.input-bordered {
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+}
+.input-borderless {
+  border: none;
+  background-color: var(--input-bg-clr);
+  border-radius: 0.6rem;
+}

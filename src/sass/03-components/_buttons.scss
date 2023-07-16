@@ -1,0 +1,174 @@
+@use "../02-utils" as *;
+
+/* ======== Buttons ======== */
+.btn {
+  cursor: pointer;
+  font-weight: 500;
+  transition: $trans-dur;
+
+  &--full {
+    @extend .btn;
+    padding: 1rem;
+    border-radius: 0.6rem;
+
+    &:hover {
+      box-shadow: $shadow-md;
+      transform: translateY(-3px);
+    }
+    &:active {
+      box-shadow: $shadow-lt;
+      transform: translateY(-1px);
+    }
+
+    &--main {
+      @extend .btn--full;
+      background-color: $clr-main;
+      color: $white-text;
+      &:hover {
+        background-color: $clr-main-dark;
+      }
+    }
+    &--white {
+      @extend .btn--full;
+      background-color: $clr-white;
+      color: inherit;
+    }
+    &--hover {
+      @extend .btn--full;
+      background-color: inherit;
+      color: $black-text;
+
+      &:hover,
+      &.active {
+        background-color: #f6f6f6;
+      }
+    }
+  }
+
+  &--bordered {
+    @extend .btn;
+    padding: 2rem;
+    // border-radius: 0.6rem;
+
+    &:hover {
+      box-shadow: $shadow-md;
+      transform: translateY(-3px);
+    }
+    &:active {
+      box-shadow: $shadow-lt;
+      transform: translateY(-1px);
+    }
+
+    &--main {
+      @extend .btn--bordered;
+      border: 1px solid $clr-main;
+    }
+  }
+
+  &--text {
+    @extend .btn;
+
+    &--main {
+      @extend .btn--text;
+      color: $clr-main;
+      padding: 3px;
+      border-bottom: 1px solid $clr-main;
+      &:hover {
+        color: $clr-main-dark;
+        border-bottom: 1px solid $clr-main-dark;
+      }
+    }
+
+    &--white {
+      @extend .btn--text;
+      color: $white-text;
+      &:hover {
+        color: $clr-main;
+      }
+    }
+    &--black {
+      @extend .btn--text;
+      color: $black-text;
+      &:hover {
+        color: $clr-main-dark;
+      }
+    }
+  }
+
+  &--icon {
+    @extend .btn;
+    font-weight: initial;
+
+    &:hover {
+      color: $clr-main-dark;
+    }
+
+    &--main {
+      @extend .btn--icon;
+      color: $clr-main;
+    }
+    &--white {
+      @extend .btn--icon;
+      color: $white-text;
+    }
+    &--black {
+      @extend .btn--icon;
+      color: $black-text;
+    }
+  }
+}
+
+/* ======== Helper Classes ======== */
+.btn--lg {
+  padding: 2rem;
+}
+.btn--sharp {
+  border-radius: 0;
+}
+
+/* ======== Toggle Button ======== */
+.toggle-checkbox {
+  /* -webkit-appearance: none;
+    appearance: none; */
+  display: none;
+}
+.toggle-btn {
+  background-color: #ccc;
+  width: 78px;
+  height: 32px;
+  border-radius: 16px;
+  position: relative;
+  transition: $trans-dur;
+  cursor: pointer;
+}
+.toggle-btn::before {
+  // font-family: $fa-style-family-classic;
+  content: "\f00d";
+  font-weight: 900;
+  background-color: #fff;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  transition: $trans-dur;
+}
+.toggle-checkbox:checked + .toggle-btn {
+  background-color: $clr-main;
+}
+.toggle-checkbox:checked + .toggle-btn::before {
+  content: "\f00c";
+  left: 5rem;
+  color: $clr-main;
+}
+/*
+  <label>
+    <input class="toggle-checkbox" type="checkbox" checked />
+    <div class="toggle-btn"></div>
+  </label>
+  */

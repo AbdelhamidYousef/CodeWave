@@ -1,0 +1,47 @@
+@use "../02-utils" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+// all text
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: $fs-normal;
+  color: $text-clr;
+}
+
+/* prettier-ignore */
+h1, .h1 {
+    font-weight: 700;
+    font-size: $fs-h1;
+    color: $black-text;
+  }
+/* prettier-ignore */
+h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {
+    font-weight: 700;
+    color: $black-text;
+  }
+/* prettier-ignore */
+h2, .h2 {
+      font-size: $fs-h2;
+    }
+/* prettier-ignore */
+h3, .h3 {
+      font-size: $fs-h3;
+    }
+/* prettier-ignore */
+h4, .h4 {
+      font-size: $fs-h4;
+    }
+/* prettier-ignore */
+h5, .h5 {
+      font-size: $fs-h5;
+    }
+/* prettier-ignore */
+h6, .h6 {
+      font-size: $fs-h6;
+    }

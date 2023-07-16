@@ -1,0 +1,39 @@
+@use "../02-utils" as *;
+@use "./buttons" as *;
+
+/* ======== Tabs ======== */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  &:first-of-type {
+    margin-bottom: 1.5rem;
+  }
+  &:nth-of-type(2) {
+    margin-bottom: 4rem;
+  }
+
+  .tab {
+    @extend .btn--full;
+
+    &--main {
+      @extend .tab;
+      background-color: lighten($color: $clr-main-light, $amount: 2);
+      &:hover,
+      &.active {
+        background: $clr-main;
+        color: white;
+      }
+    }
+    &--red {
+      @extend .tab;
+      background-color: lighten($color: $clr-red-ligher, $amount: 4);
+      &:hover,
+      &.active {
+        background: $clr-red;
+        color: white;
+      }
+    }
+  }
+}

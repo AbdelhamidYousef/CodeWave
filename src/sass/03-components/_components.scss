@@ -1,0 +1,42 @@
+@use "../02-utils" as *;
+
+/* ======== Component ======== */
+.components-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(20rem, 1fr);
+}
+@media screen and (min-width: 568px) {
+  .components-container {
+    grid-template-columns: repeat(auto-fill, minmax(45rem, 1fr));
+  }
+}
+
+.component {
+  padding: var(--main-padding);
+  background-color: var(--component-clr);
+
+  border-radius: 1rem;
+  box-shadow: var(--med-box-shadow);
+
+  display: grid;
+  gap: 2rem;
+  align-content: start; /* In case a component has a fixed height */
+}
+
+.component-subtitle {
+  margin-top: -1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-clr-light);
+}
+
+.component-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+.component-row:not(:last-of-type) {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
