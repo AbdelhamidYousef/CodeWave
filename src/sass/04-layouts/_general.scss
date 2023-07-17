@@ -28,20 +28,15 @@ section {
 // Titles
 .main-title {
   @extend .h2;
-  color: var(--white-text);
+  color: var(--white-all-theme);
 
-  @include dark-mode {
-    color: var(--black-text);
-  }
+
 }
 .main-subtitle {
   @extend .h3;
-  color: var(--clr-white);
+  color: var(--white-all-theme);
   margin-bottom: 1.5rem;
 
-  @include dark-mode {
-    color: var(--black-text);
-  }
 }
 
 .section-title,

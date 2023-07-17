@@ -52,18 +52,14 @@
       &__link {
         padding: 2rem;
         border-bottom: 1px solid rgba(var(--clr-white), 0.3);
-        color: var(--white-text);
-        @include dark-mode {
-          color: var(--black-text);
-        }
+        color: var(--white-all-theme);
+     
 
         &:hover {
           padding-left: 3rem;
           border-color: var(--clr-main);
-          color: var(--white-text);
-          @include dark-mode {
-            color: var(--black-text);
-          }
+          color: var(--white-all-theme);
+         
         }
       }
 
@@ -121,6 +117,7 @@
     animation: move-left 0.5s ease-out;
 
     &__theme-btn {
+      min-width: 2.1rem;
       @include respond(tab-land) {
         font-size: 1.4rem;
       }

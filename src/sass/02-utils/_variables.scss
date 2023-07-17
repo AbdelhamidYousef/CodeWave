@@ -1,40 +1,45 @@
+@use "./mixins" as *;
+
 // >>>>>>>>>>>>>>> Colors <<<<<<<<<<<<<<<<<<
-
-// >>> Light Mode Colors
 :root {
-  // Main Color
-  --clr-white: #f0f9ff; // sky-50
-  --clr-main-lighter: #e0f2fe; // sky-100
-  --clr-main-light: #bae6fd; // sky-300
-  --clr-main: #38bdf8; // sky-400
-  --clr-main-dark: #0284c7; // sky-600
-  --clr-main-darker: #075985; // sky-800
-  --clr-black: #032030;
+  // >>> Light Theme Colors
+  &,
+  &.light-theme {
+    // Main Color
+    --clr-white: #f0f9ff; // sky-50
+    --clr-main-lighter: #e0f2fe; // sky-100
+    --clr-main-light: #bae6fd; // sky-300
+    --clr-main: #38bdf8; // sky-400
+    --clr-main-dark: #0284c7; // sky-600
+    --clr-main-darker: #075985; // sky-800
+    --clr-black: #032030;
 
-  // Text Colors
-  --white-text: var(--clr-white);
-  --black-text: var(--clr-black);
-  --text-clr-main: #0ea5e9; // sky-500
-  --text-clr: #475569; // slate-600
-  --text-clr-light: #94a3b8; // slate-400
-  --text-clr-lighter: #cbd5e1; // slate-400
+    --white-all-theme: #f0f9ff; // won't change when theme changes
 
-  // General Colors
-  --clr-red-ligher: hsl(4, 90%, 90%);
-  --clr-red: hsl(4, 90%, 58%);
-  --clr-green-lighter: hsl(142, 69%, 90%);
-  --clr-green: hsl(142, 71%, 45%);
-  --clr-orange-lighter: hsl(38, 92%, 90%);
-  --clr-orange: hsl(38, 92%, 50%);
+    // Text Colors
+    --white-text: var(--clr-white);
+    --black-text: var(--clr-black);
+    --text-clr-main: #0ea5e9; // sky-500
+    --text-clr: #475569; // slate-600
+    --text-clr-light: #94a3b8; // slate-400
+    --text-clr-lighter: #cbd5e1; // slate-400
 
-  // Elements Colors
-  --grad-hero: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
-  --main-overlay: rgba(3, 105, 161, 0.6);
-}
+    // General Colors
+    --clr-red-ligher: hsl(4, 90%, 90%);
+    --clr-red: hsl(4, 90%, 58%);
+    --clr-green-lighter: hsl(142, 69%, 90%);
+    --clr-green: hsl(142, 71%, 45%);
+    --clr-orange-lighter: hsl(38, 92%, 90%);
+    --clr-orange: hsl(38, 92%, 50%);
 
-// >>> Dark Mode Colors
-@media (prefers-color-scheme: dark) {
-  :root {
+    // Elements Colors
+    --grad-hero: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    --main-overlay: rgba(3, 105, 161, 0.6);
+    --image-circle: hsl(201, 94%, 80%);
+  }
+
+  // >>> Listening to theme-btn
+  &.dark-theme {
     // Main Color
     --clr-white: #032030;
     --clr-main-lighter: #075985; // sky-800
@@ -54,12 +59,49 @@
 
     // General Colors
     --clr-red-ligher: hsl(4, 90%, 75%);
+    --clr-red: hsl(4, 90%, 58%);
     --clr-green-lighter: hsl(142, 69%, 75%);
+    --clr-green: hsl(142, 71%, 45%);
     --clr-orange-lighter: hsl(38, 92%, 75%);
+    --clr-orange: hsl(38, 92%, 50%);
 
-    // Gradients
+    // Elements Colors
     --grad-hero: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     --main-overlay: hsla(201, 80%, 41%, 0.7);
+    --image-circle: hsl(201, 94%, 48%);
+  }
+
+  // >>> Listening to device preffered theme
+  @include dark-theme {
+    // Main Color
+    --clr-white: #032030;
+    --clr-main-lighter: #075985; // sky-800
+    --clr-main-light: #0284c7; // sky-600
+    --clr-main: #38bdf8; // sky-400
+    --clr-main-dark: #38bdf8; // sky-400
+    --clr-main-darker: #e0f2fe; // sky-100
+    --clr-black: #f0f9f9; // sky-50
+
+    // Text Colors
+    // --white-text: var(--clr-black);
+    // --black-text: var(--clr-white);
+    --text-clr-main: #0ea5e9; // sky-500
+    --text-clr: var(--clr-black);
+    --text-clr-light: var(--clr-black);
+    --text-clr-lighter: var(--clr-black);
+
+    // General Colors
+    --clr-red-ligher: hsl(4, 90%, 75%);
+    --clr-red: hsl(4, 90%, 58%);
+    --clr-green-lighter: hsl(142, 69%, 75%);
+    --clr-green: hsl(142, 71%, 45%);
+    --clr-orange-lighter: hsl(38, 92%, 75%);
+    --clr-orange: hsl(38, 92%, 50%);
+
+    // Elements Colors
+    --grad-hero: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    --main-overlay: hsla(201, 80%, 41%, 0.7);
+    --image-circle: hsl(201, 94%, 48%);
   }
 }
 

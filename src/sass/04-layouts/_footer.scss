@@ -31,9 +31,9 @@
       justify-content: space-around;
 
       i {
-        @include dark-mode {
-          color: var(--black-text);
-        }
+       
+          color: var(--white-all-theme);
+       
       }
     }
   }

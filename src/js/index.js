@@ -43,3 +43,69 @@ document.querySelectorAll(".js-tabs-container").forEach((tabsContainer) => {
   });
 });
 
+/* Changing Color-theme */
+
+class Theme {
+  #themeBtn = document.getElementById("theme-btn");
+  #themeIcon = document.querySelector("i");
+  #theme = "";
+
+  constructor() {
+    this.#getSiteTheme();
+
+    this.#themeBtn.addEventListener("click", () => {
+      this.#theme = this.#theme === "light" ? "dark" : "light";
+      this.#applyTheme();
+      this.#saveTheme();
+    });
+  }
+
+  // Getting prefered site theme from local storage (if there's any)
+  #getSiteTheme() {
+    this.#theme = localStorage.getItem("theme");
+
+    if (this.#theme) this.#applyTheme();
+    else this.#getDeviceTheme();
+  }
+
+  // If there is no site prefered theme => get device prefered theme
+  #getDeviceTheme() {
+    this.#theme = window.matchMedia("(prefers-color-scheme: light)").matches
+      ? "light"
+      : "dark";
+
+    this.#applyTheme();
+  }
+
+  // Appling theme
+  #applyTheme() {
+    if (this.#theme === "light") {
+      document.documentElement.className = "light-theme";
+      this.#themeIcon.className = "fa-solid fa-xl fa-moon";
+    } else {
+      document.documentElement.className = "dark-theme";
+      this.#themeIcon.className = "fa-solid fa-xl fa-sun";
+    }
+  }
+
+  #saveTheme() {
+    localStorage.setItem("theme", this.#theme);
+  }
+}
+const theme = new Theme();
+
+// // Theme button click event
+// themeBtn.addEventListener("click", () => {
+//   document.documentElement.classList.toggle("light-theme");
+//   document.documentElement.classList.toggle("dark-theme");
+//   themeIcon.classList.toggle("fa-sun");
+//   themeIcon.classList.toggle("fa-moon");
+
+//   localStorage.setItem("theme", getCurrentMode());
+// });
+
+// function getCurrentMode() {
+//   return document.body.classList.contains("dark-theme")
+//     ? "dark-theme"
+//     : "light-mode";
+// }

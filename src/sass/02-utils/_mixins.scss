@@ -60,7 +60,7 @@ Units:
   }
 }
 
-@mixin dark-mode {
+@mixin dark-theme {
   @media only screen and (prefers-color-scheme: dark) {
     @content;
   }

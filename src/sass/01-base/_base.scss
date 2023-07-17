@@ -13,9 +13,9 @@ html {
   scroll-behavior: smooth;
   box-sizing: border-box;
   font-size: 62.5%;
-  // @include respond(lg-desktop) {
-  //   font-size: 80%;
-  // }
+  @include respond(lg-desktop) {
+    font-size: 70%;
+  }
 }
 
 ::selection {

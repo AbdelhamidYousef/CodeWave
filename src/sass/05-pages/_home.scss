@@ -32,13 +32,9 @@
   }
 
   &__desc {
-    color: var(--white-text);
+    color: var(--white-all-theme);
     font-size: $fs-h5;
     line-height: 1.7;
-
-    @include dark-mode {
-      color: var(--black-text);
-    }
   }
 }
 
@@ -82,10 +78,7 @@
       &::after {
         width: 35rem;
         height: 35rem;
-        background-color: hsl(201, 94%, 80%);
-        @include dark-mode {
-          background-color: hsl(201, 94%, 48%);
-        }
+        background-color: var(--image-circle);
       }
     }
     &__img {
@@ -126,7 +119,7 @@
 
 .stats {
   background: linear-gradient(135deg, rgba(#000, 0.5), rgba(#000, 0.5)),
-    url(../assets/img/stats.png) center/cover no-repeat;
+    url(../assets/img/stats.jpg) center/cover no-repeat;
 
   &__container {
     background-color: var(--main-overlay);

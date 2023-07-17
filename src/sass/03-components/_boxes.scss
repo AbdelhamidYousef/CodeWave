@@ -149,10 +149,8 @@
   .sm-box {
     padding: 4rem;
     text-align: center;
-    color: var(--white-text);
-    @include dark-mode {
-      color: var(--black-text);
-    }
+    color: var(--white-all-theme);
+    
 
     &__icon {
       font-size: 3.5rem;
@@ -182,10 +180,8 @@
     border-radius: 0.6rem;
     justify-self: center;
     text-align: center;
-    background-color: #fcfcfc;
-    @include dark-mode {
-      background-color: var(--clr-main-lighter);
-    }
+    background-color: var(--clr-main-lighter);
+    
 
     &__head {
       padding: 4rem 2rem;
@@ -242,9 +238,7 @@
 
   .pricing-card--best {
     background-color: var(--clr-main-light);
-    // @include dark-mode {
-    //   background-color: var(--clr-main-lighter);
-    // }
+    
 
     overflow: hidden;
 
