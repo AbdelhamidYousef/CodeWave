@@ -7,14 +7,14 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: $fs-normal;
-  color: $text-clr;
+  color: var(--text-clr);
 }
 
 /* prettier-ignore */
 h1, .h1 {
     font-weight: 700;
     font-size: $fs-h1;
-    color: $black-text;
+    color: var(--black-text);
   }
 /* prettier-ignore */
 h2, .h2,
@@ -23,7 +23,7 @@ h2, .h2,
   h5, .h5,
   h6, .h6 {
     font-weight: 700;
-    color: $black-text;
+    color: var(--black-text);
   }
 /* prettier-ignore */
 h2, .h2 {

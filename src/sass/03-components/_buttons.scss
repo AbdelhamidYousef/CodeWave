@@ -22,21 +22,21 @@
 
     &--main {
       @extend .btn--full;
-      background-color: $clr-main;
-      color: $white-text;
+      background-color: var(--clr-main);
+      color: var(--white-text);
       &:hover {
-        background-color: $clr-main-dark;
+        background-color: var(--clr-main-dark);
       }
     }
     &--white {
       @extend .btn--full;
-      background-color: $clr-white;
+      background-color: var(--clr-white);
       color: inherit;
     }
     &--hover {
       @extend .btn--full;
       background-color: inherit;
-      color: $black-text;
+      color: var(--black-text);
 
       &:hover,
       &.active {
@@ -61,7 +61,7 @@
 
     &--main {
       @extend .btn--bordered;
-      border: 1px solid $clr-main;
+      border: 1px solid var(--clr-main);
     }
   }
 
@@ -70,27 +70,27 @@
 
     &--main {
       @extend .btn--text;
-      color: $clr-main;
+      color: var(--clr-main);
       padding: 3px;
-      border-bottom: 1px solid $clr-main;
+      border-bottom: 1px solid var(--clr-main);
       &:hover {
-        color: $clr-main-dark;
-        border-bottom: 1px solid $clr-main-dark;
+        color: var(--clr-main-dark);
+        border-bottom: 1px solid var(--clr-main-dark);
       }
     }
 
     &--white {
       @extend .btn--text;
-      color: $white-text;
+      color: var(--white-text);
       &:hover {
-        color: $clr-main;
+        color: var(--clr-main);
       }
     }
     &--black {
       @extend .btn--text;
-      color: $black-text;
+      color: var(--black-text);
       &:hover {
-        color: $clr-main-dark;
+        color: var(--clr-main-dark);
       }
     }
   }
@@ -100,20 +100,20 @@
     font-weight: initial;
 
     &:hover {
-      color: $clr-main-dark;
+      color: var(--clr-main-dark);
     }
 
     &--main {
       @extend .btn--icon;
-      color: $clr-main;
+      color: var(--clr-main);
     }
     &--white {
       @extend .btn--icon;
-      color: $white-text;
+      color: var(--white-text);
     }
     &--black {
       @extend .btn--icon;
-      color: $black-text;
+      color: var(--black-text);
     }
   }
 }
@@ -159,12 +159,12 @@
   transition: $trans-dur;
 }
 .toggle-checkbox:checked + .toggle-btn {
-  background-color: $clr-main;
+  background-color: var(--clr-main);
 }
 .toggle-checkbox:checked + .toggle-btn::before {
   content: "\f00c";
   left: 5rem;
-  color: $clr-main;
+  color: var(--clr-main);
 }
 /*
   <label>

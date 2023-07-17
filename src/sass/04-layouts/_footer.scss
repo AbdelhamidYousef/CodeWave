@@ -23,19 +23,25 @@
   &__social {
     &__text {
       padding: 2rem 1rem;
-      border-bottom: 1px solid $clr-white;
+      border-bottom: 1px solid var(--clr-white);
     }
     &__icons {
       padding-top: 2rem;
       display: flex;
       justify-content: space-around;
+
+      i {
+        @include dark-mode {
+          color: var(--black-text);
+        }
+      }
     }
   }
 
   &__rights {
     text-align: center;
     &__name {
-      color: $clr-main-light;
+      color: var(--clr-main-light);
     }
   }
 }

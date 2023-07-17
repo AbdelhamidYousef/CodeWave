@@ -20,7 +20,7 @@
 
     &__icon {
       font-size: 4.6rem;
-      color: $text-clr-main;
+      color: var(--text-clr-main);
       margin-bottom: 2rem;
     }
 
@@ -46,7 +46,7 @@
 
     &__icon {
       font-size: 4rem;
-      color: $text-clr-main;
+      color: var(--text-clr-main);
       margin-bottom: 2rem;
 
       margin-top: -0.5rem;
@@ -62,7 +62,7 @@
   .card {
     max-width: 50rem;
     justify-self: center;
-    background-color: $clr-white;
+    background-color: var(--clr-white);
     box-shadow: $shadow-lt;
 
     &__img {
@@ -108,7 +108,7 @@
       bottom: 0;
       width: 100%;
       padding: 2rem $main-padding;
-      background-color: $clr-white;
+      background-color: var(--clr-white);
 
       transform: scaleY(0);
       transform-origin: bottom;
@@ -120,7 +120,7 @@
       }
       &__keywords {
         // @extend .h4;
-        color: $text-clr-main;
+        color: var(--text-clr-main);
         font-weight: 700;
 
         .pipe {
@@ -148,8 +148,11 @@
 
   .sm-box {
     padding: 4rem;
-    color: $clr-white;
     text-align: center;
+    color: var(--white-text);
+    @include dark-mode {
+      color: var(--black-text);
+    }
 
     &__icon {
       font-size: 3.5rem;
@@ -178,12 +181,15 @@
     min-width: 30rem;
     border-radius: 0.6rem;
     justify-self: center;
-    background-color: #fcfcfc;
     text-align: center;
+    background-color: #fcfcfc;
+    @include dark-mode {
+      background-color: var(--clr-main-lighter);
+    }
 
     &__head {
       padding: 4rem 2rem;
-      border-bottom: 1px solid $clr-main;
+      border-bottom: 1px solid var(--clr-main);
 
       &__type {
         font-size: $fs-h5;
@@ -195,7 +201,7 @@
       &__price {
         font-size: $fs-h1;
         font-weight: 800;
-        color: $black-text;
+        color: var(--black-text);
 
         &::before {
           content: "$";
@@ -216,15 +222,15 @@
     }
 
     &__features {
-      border-bottom: 1px solid $clr-main;
+      border-bottom: 1px solid var(--clr-main);
       display: grid;
       justify-items: center;
-      color: $black-text;
+      color: var(--black-text);
 
       &__feature {
         padding: 2rem 1rem;
         &:not(:last-child) {
-          border-bottom: 1px solid $clr-main;
+          border-bottom: 1px solid var(--clr-main);
         }
       }
     }
@@ -235,7 +241,10 @@
   }
 
   .pricing-card--best {
-    background-color: $clr-main-light;
+    background-color: var(--clr-main-light);
+    // @include dark-mode {
+    //   background-color: var(--clr-main-lighter);
+    // }
 
     overflow: hidden;
 
@@ -246,8 +255,8 @@
       top: 26px;
       left: -65px;
       padding: 1rem 7rem;
-      background-color: $clr-orange;
-      color: $black-text;
+      background-color: var(--clr-orange);
+      color: var(--black-text);
       text-transform: uppercase;
       transform: rotate(-40deg);
     }

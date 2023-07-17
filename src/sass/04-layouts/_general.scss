@@ -6,7 +6,7 @@ body {
   background-color: $body-clr;
 }
 section:nth-of-type(even) {
-  background-color: $clr-main-lighter;
+  background-color: var(--clr-main-lighter);
 }
 
 // Main Layout
@@ -16,7 +16,6 @@ body {
 section {
   padding-top: clamp(3rem, 1rem + 6.67vw, 9rem);
   padding-bottom: clamp(3rem, 0.3rem + 9vw, 12rem);
-
 }
 
 .container {
@@ -29,13 +28,20 @@ section {
 // Titles
 .main-title {
   @extend .h2;
-  color: $clr-white;
-  margin-bottom: 1rem;
+  color: var(--white-text);
+
+  @include dark-mode {
+    color: var(--black-text);
+  }
 }
 .main-subtitle {
   @extend .h3;
-  color: $clr-white;
+  color: var(--clr-white);
   margin-bottom: 1.5rem;
+
+  @include dark-mode {
+    color: var(--black-text);
+  }
 }
 
 .section-title,
@@ -45,7 +51,7 @@ section {
 .section-title {
   font-size: $fs-large;
   font-weight: 800;
-  color: $text-clr-lighter;
+  color: var(--text-clr-lighter);
   letter-spacing: -1px;
   @include respond(tab-port) {
     letter-spacing: -3px;

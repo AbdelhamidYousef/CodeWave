@@ -43,4 +43,3 @@ document.querySelectorAll(".js-tabs-container").forEach((tabsContainer) => {
   });
 });
 
-console.log("sdjkhfsdfgit ");

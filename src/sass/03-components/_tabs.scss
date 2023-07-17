@@ -19,19 +19,19 @@
 
     &--main {
       @extend .tab;
-      background-color: lighten($color: $clr-main-light, $amount: 2);
+      background-color: var(--clr-main-light);
       &:hover,
       &.active {
-        background: $clr-main;
+        background: var(--clr-main);
         color: white;
       }
     }
     &--red {
       @extend .tab;
-      background-color: lighten($color: $clr-red-ligher, $amount: 4);
+      background-color: var(--clr-red-ligher);
       &:hover,
       &.active {
-        background: $clr-red;
+        background: var(--clr-red);
         color: white;
       }
     }

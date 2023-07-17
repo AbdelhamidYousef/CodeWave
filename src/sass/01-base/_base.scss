@@ -19,8 +19,8 @@ html {
 }
 
 ::selection {
-  background-color: $clr-main;
-  color: $white-text;
+  background-color: var(--clr-main);
+  color: var(--white-text);
 }
 
 // Responsive Images
@@ -52,6 +52,7 @@ button {
   border: none;
   font-family: inherit;
   font-size: inherit;
+  color: inherit;
 }
 
 // General

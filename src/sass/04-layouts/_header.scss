@@ -18,7 +18,7 @@
       left: 50%;
       transform: translateX(-50%);
       top: 100%;
-      background-color: #bbb;
+      background-color: hsla(0, 0%, 65%);
       width: calc(100% - $main-padding);
       height: 2px;
     }
@@ -46,16 +46,24 @@
       position: absolute;
       left: 0;
       top: calc(100% + 2px);
-      background-color: rgba(#0369a1, 0.6);
+      background-color: var(--main-overlay);
       min-width: 100%;
 
       &__link {
         padding: 2rem;
-        border-bottom: 1px solid rgba($clr-white, 0.3);
+        border-bottom: 1px solid rgba(var(--clr-white), 0.3);
+        color: var(--white-text);
+        @include dark-mode {
+          color: var(--black-text);
+        }
 
         &:hover {
           padding-left: 3rem;
-          border-color: $clr-main;
+          border-color: var(--clr-main);
+          color: var(--white-text);
+          @include dark-mode {
+            color: var(--black-text);
+          }
         }
       }
 
@@ -65,7 +73,7 @@
       transition: $trans-dur;
       &.toggle {
         transform: scale(1);
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(3px);
       }
     }
 
@@ -91,7 +99,7 @@
           left: 50%;
           transform: translateX(-50%);
           bottom: -2px;
-          background-color: $clr-main-dark;
+          background-color: var(--clr-main-dark);
           width: calc(100% + 2rem);
           height: 2px;
 
@@ -127,7 +135,7 @@
       &__line {
         width: inherit;
         height: 2px;
-        background-color: $clr-white;
+        background-color: currentColor;
         &:nth-child(2) {
           transform: scaleX(0.7);
           transform-origin: right;
@@ -135,7 +143,7 @@
       }
       // Hover Effect
       &:hover &__line:nth-child(2) {
-        transition: $trans-dur;
+        transition: transform $trans-dur;
         transform: scaleX(1);
       }
 
