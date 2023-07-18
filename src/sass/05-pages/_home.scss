@@ -144,7 +144,7 @@
     color: var(--black-text);
   }
   &__mail {
-    @extend .h4;
+    font-size: clamp(1.8rem, 1.47rem + 1.11vw, 2.8rem);
     font-weight: 800;
     color: var(--text-clr-main);
     transition: $trans-dur;
