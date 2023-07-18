@@ -5,7 +5,7 @@
     url(../assets/img/footer.jpg) center top/cover no-repeat;
 
   &__container {
-    padding: clamp(4rem, 2.7rem + 4.44vw, 8rem);
+    padding: clamp(3rem, 2rem + 3.33vw, 6rem);
     display: grid;
     justify-items: center;
     gap: clamp(2rem, 1.4rem + 2.22vw, 4rem);
@@ -17,7 +17,26 @@
   }
 
   &__logo {
-    height: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation: move-right 0.5s ease-in-out;
+
+    &__img {
+      width: 13.6rem;
+      height: 7.6rem;
+    }
+    &__text {
+      font-family: $archivo-black;
+      color: var(--white-all-theme);
+
+      margin-top: -0.5rem;
+
+      &__blue {
+        color: var(--text-clr-main);
+      }
+    }
   }
 
   &__social {
@@ -31,9 +50,7 @@
       justify-content: space-around;
 
       i {
-       
-          color: var(--white-all-theme);
-       
+        color: var(--white-all-theme);
       }
     }
   }
@@ -41,7 +58,7 @@
   &__rights {
     text-align: center;
     &__name {
-      color: var(--clr-main-light);
+      color: var(--clr-main);
     }
   }
 }

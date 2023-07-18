@@ -1,10 +1,8 @@
 @use "../02-utils" as *;
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
-
 // all text
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: $open-sans;
   font-weight: 400;
   font-size: $fs-normal;
   color: var(--text-clr);
